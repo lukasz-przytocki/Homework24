@@ -102,7 +102,7 @@ select sum(wypłata_st)as SUMA_WYPŁAT from stanowisko;
 
 --15. Pobiera pracowników mieszkających w lokalizacji z kodem pocztowym 90210 (albo innym, który będzie miał sens dla Twoich danych testowych)
 
-select imie, nazwisko, adres.ulica_numer, adres.kod_pocztowy, adres.miejscowość, stanowisko.nazwa_st as stanowisko from pracownik
-INNER JOIN adres ON pracownik.prac_id=adres.prac_id
-INNER JOIN stanowisko ON pracownik.prac_id=stanowisko.prac_id
-where adres.kod_pocztowy='01-300';
+select imie, nazwisko, a.ulica_numer, a.kod_pocztowy, a.miejscowość, s.nazwa_st from pracownik p
+INNER JOIN adres a ON p.prac_id=a.prac_id
+INNER JOIN stanowisko s ON p.prac_id=s.prac_id
+where a.kod_pocztowy='01-300';
