@@ -91,3 +91,18 @@ VALUES('Kierownik','Zarządzanie zasobami i projektem',15000,1),
       ('Informatyk','Zarzadzanie infrastruktura IT',7000,3);
 
 -- 13. Pobiera pełne informacje o pracowniku (imię, nazwisko, adres, stanowisko)
+
+select imie, nazwisko, adres.ulica_numer, adres.kod_pocztowy, adres.miejscowość, stanowisko.nazwa_st as stanowisko from pracownik
+INNER JOIN adres ON pracownik.prac_id=adres.prac_id
+INNER JOIN stanowisko ON pracownik.prac_id=stanowisko.prac_id;
+
+-- 14. Oblicza sumę wypłat dla wszystkich pracowników w firmie
+
+select sum(wypłata_st)as SUMA_WYPŁAT from stanowisko;
+
+--15. Pobiera pracowników mieszkających w lokalizacji z kodem pocztowym 90210 (albo innym, który będzie miał sens dla Twoich danych testowych)
+
+select imie, nazwisko, adres.ulica_numer, adres.kod_pocztowy, adres.miejscowość, stanowisko.nazwa_st as stanowisko from pracownik
+INNER JOIN adres ON pracownik.prac_id=adres.prac_id
+INNER JOIN stanowisko ON pracownik.prac_id=stanowisko.prac_id
+where adres.kod_pocztowy='01-300';
