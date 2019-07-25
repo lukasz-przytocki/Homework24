@@ -77,18 +77,18 @@ select * from stanowisko;
 
 INSERT INTO pracownik(prac_id, imie, nazwisko)
 VALUES(1, 'Jan','Kowalski'),
-	  (2, 'Karol','Zięba'),
+      (2, 'Karol','Zięba'),
       (3, 'Anna','Zawada');
 
 INSERT INTO adres (ulica_numer, kod_pocztowy, miejscowość,prac_id)
 VALUES('Mickiewicza 12/5', '51-160','Wrocław',1),
-	  ('Słowackiego 5/6','12-120','Kraków',2),
+      ('Słowackiego 5/6','12-120','Kraków',2),
       ('Bolka i Lolka 32','01-300','Warszawa',3);
 	
  INSERT INTO stanowisko(nazwa_st,opis_st,wypłata_st,prac_id)
 VALUES('Kierownik','Zarządzanie zasobami i projektem',15000,1),
-	  ('Sprzedawca','Kontakt z klientem, sprzedaz bezposlrednia', 5000,1),
-      ('Informatyk','Zarzadzanie infrastruktura IT',7000,3);
+       ('Sprzedawca','Kontakt z klientem, sprzedaz bezposlrednia', 5000,1),
+       ('Informatyk','Zarzadzanie infrastruktura IT',7000,3);
 
 -- 13. Pobiera pełne informacje o pracowniku (imię, nazwisko, adres, stanowisko)
 
