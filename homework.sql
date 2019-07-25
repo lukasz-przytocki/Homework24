@@ -33,6 +33,7 @@ VALUES ('Jan','Kowalski',5000, '1988-01-23', 'Kierowca autobusu'),
 select id, imie, nazwisko, wyplata+(wyplata*0.1), data_urodzenia, stanowisko from pracownik where stanowisko='Pielęgniarka';
 
 -- 7. Usuwa najmłodszego pracownika
+-- to mi nie działa 
 
 -- select data_urodzenia from pracownik where data_urodzenia=(select MIN(data_urodzenia) from pracownik);
 -- delete from pracownik where data_urodzenia=(select MIN(data_urodzenia) from pracownik);
